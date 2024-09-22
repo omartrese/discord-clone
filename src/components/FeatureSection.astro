@@ -1,0 +1,24 @@
+---
+interface Props {
+    title: string;
+    desc: string;
+    imgSrc: string;
+    bgColor: string;
+    reversed: boolean;
+}
+
+const { title, desc, imgSrc, bgColor, reversed } = Astro.props;
+---
+
+<section
+    style={`background-color: ${bgColor};`}
+    class={`flex text-[#23272A] ${reversed ? "flex-row-reverse" : "flex-row"} items-center`}
+>
+    <img style="width: 580px; height: 376.4px" src={imgSrc} alt={title} />
+    <div>
+        <h6>{title}</h6>
+        <p>
+            {desc}
+        </p>
+    </div>
+</section>

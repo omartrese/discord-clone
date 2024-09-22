@@ -1,16 +1,48 @@
 ---
-
+import FeatureSection from "../components/FeatureSection.astro";
+import Hero from "../components/Hero.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Discord - Your Place to Talk and Hang Out">
+    <Hero />
+
+    <FeatureSection
+        title="Create an invite-only place where you belong"
+        desc={`Discord servers are organized into topic-based channels where you can collaborate, share, and just talk about your day without clogging up a group chat.
+            With tons of features, including screen sharing, voice channels, and integrations, it's the ultimate place to hang out with your friends, or run a whole community.
+            Customize it with moderation tools, custom emojis, and bots!`}
+        imgSrc="../../public/img3.svg"
+        bgColor="#FFFFFF"
+        reversed={false}
+    />
+
+    <FeatureSection
+        title="Create an invite-only place where you belong"
+        desc={`Discord servers are organized into topic-based channels where you can collaborate, share, and just talk about your day without clogging up a group chat.
+            With tons of features, including screen sharing, voice channels, and integrations, it's the ultimate place to hang out with your friends, or run a whole community.
+            Customize it with moderation tools, custom emojis, and bots!`}
+        imgSrc="../../public/img4.svg"
+        bgColor="#f6f6f6"
+        reversed={true}
+    />
+
+    <FeatureSection
+        title="Create an invite-only place where you belong"
+        desc={`Discord servers are organized into topic-based channels where you can collaborate, share, and just talk about your day without clogging up a group chat.
+        With tons of features, including screen sharing, voice channels, and integrations, it's the ultimate place to hang out with your friends, or run a whole community.
+        Customize it with moderation tools, custom emojis, and bots!`}
+        imgSrc="../../public/img5.svg"
+        bgColor="#FFFFFF"
+        reversed={false}
+    />
+
+    <h2>Reliable tech for staying close</h2>
+    <p>
+        Low-latency voice and video feels like you’re in the same room. Wave
+        hello over video, watch friends stream their games, or gather up and
+        have a drawing session with screen share.
+    </p>
+    <img src="../../public/img6.svg" alt="FeatureSectionFooter">
+    <button>Download for Linux</button>
+</Layout>

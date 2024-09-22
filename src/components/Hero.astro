@@ -1,0 +1,74 @@
+---
+import Download from "./Svgs/DownloadSvg.astro";
+---
+
+<section
+    id="hero"
+    class="bg-[#4B42FF] relative flex items-end justify-center max-[982px]:justify-start max-md:flex-col-reverse max-md:items-start max-md:justify-between max-md:pb-24"
+>
+    <div class="w-1/2 z-[1] max-w-[689px] max-[982px]:hidden max-md:flex max-md:items-center  max-md:absolute max-md:bottom-0  max-md:mx-auto">
+        <img
+            class="min-w-[450px] max-w-[689px] max-h-[352px] max-md:w-auto "
+            src="../../public/img1.svg"
+            alt="Hero section 1"
+        />
+    </div>
+
+    <div class="pt-20 pb-40 max-[300px]:px-3 min-[982px]:m-0 max-md:pt-12 ml-10 z-10">
+        <h1
+            class="text-start text-nowrap text-6xl max-md:text-[7vw] max-md:text-wrap min-[982px]:text-center max-[982px]:text-wrap"
+        >
+            IMAGINE A PLACE...
+        </h1>
+
+        <div class="w-full">
+            <p
+                class="my-10 max-[768px]:my-6 max-[982px]:text-base max-[982px]:leading-7 max-[982px]:max-w-[560px] max-w-[650px] text-lg leading-8 min-[982px]:mx-auto max-[982px]:mr-5 min-[982px]:text-center"
+            >
+                ...where you can belong to a school club, a gaming group, or a
+                worldwide art community. Where just you and a handful of friends
+                can spend time together. A place that makes it easy to talk
+                every day and hang out more often.
+            </p>
+        </div>
+
+        <div
+            class="flex flex-row text-nowrap flex-nowrap justify-center max-[982px]:justify-start max-[982px]:flex-col max-[982px]:items-start *:hover:no-underline *:duration-200"
+        >
+            <a
+                href=""
+                class="flex flex-row items-center justify-center rounded-full text-lg font-medium bg-white text-[#23272A] px-6 py-3 mx-4 my-2 hover:shadow-2xl hover:text-indigo-500 max-[300px]:text-xs max-[300px]:px-6 max-[300px]:py-2"
+            >
+                <div class="mr-3">
+                    <Download />
+                </div>
+                Download for Linux
+            </a>
+            <a
+                href=""
+                class="rounded-full text-lg mx-4 my-2 px-8 py-3 bg-[#23272A] text-white hover:shadow-2xl hover:bg-[#313338] max-[300px]:text-xs max-[300px]:px-6 max-[300px]:py-2"
+            >
+                Open Discord in your browser
+            </a>
+        </div>
+    </div>
+
+    <div class="w-1/2 max-md:hidden max-w-[689px] max-[982px]:z-[0] max-[982px]:absolute max-[982px]:right-0 max-[982px]:bottom-0">
+        <img 
+            class="max-w-[615px]
+            max-h-[360px]"
+            src="../../public/img2.svg"
+            alt="Hero section 2"
+        />
+    </div>
+</section>
+
+<style>
+    @media (min-width: 982px) {
+        #hero {
+            background-image: url("../../public/bg.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+</style>

@@ -29,11 +29,21 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
-	@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
-
 	@font-face {
 		font-family: "discordFont";
 		src: url("../../public/fonts/ABCGintoNord-Black.otf");
+	}
+	@font-face {
+		font-family: "ggSansNormal";
+		src: url("../../public/fonts/ggsans-Normal.ttf");
+	}
+	@font-face {
+		font-family: "ggSansSemiBold";
+		src: url("../../public/fonts/ggsans-Semibold.ttf");
+	}
+	@font-face {
+		font-family: "ggSansExtraBold";
+		src: url("../../public/fonts/ggsans-ExtraBold.ttf");
 	}
 
 	* {
@@ -42,7 +52,7 @@ const { title } = Astro.props;
 	}
 
 	html {
-		font-family: "Nurito Sans", system-ui, sans-serif;
+		font-family: "ggSans", system-ui, sans-serif;
 		color-scheme: dark light;
 	}
 
@@ -67,6 +77,10 @@ const { title } = Astro.props;
 	h4,
 	h5 {
 		font-family: "discordFont";
+	}
+
+	h6 {
+		font-family: "ggSansExtraBold", sans-serif;
 	}
 
 	a:hover {

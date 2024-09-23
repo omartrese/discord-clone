@@ -12,13 +12,17 @@ const { title, desc, imgSrc, bgColor, reversed } = Astro.props;
 
 <section
     style={`background-color: ${bgColor};`}
-    class={`flex text-[#23272A] ${reversed ? "flex-row-reverse" : "flex-row"} items-center`}
+    class={`flex justify-center`}
 >
-    <img style="width: 580px; height: 376.4px" src={imgSrc} alt={title} />
-    <div>
-        <h6 class="text-5xl">{title}</h6>
-        <p class="text-lg">
-            {desc}
-        </p>
+    <div
+        class={`flex text-[#23272A] ${reversed ? "flex-row-reverse" : "flex-row"} items-center justify-center w-3/5 py-40`}
+    >
+        <img style="width: 580px; height: 376.4px" src={imgSrc} alt={title} />
+        <div>
+            <h6 class="text-5xl">{title}</h6>
+            <p class="text-lg">
+                {desc}
+            </p>
+        </div>
     </div>
 </section>

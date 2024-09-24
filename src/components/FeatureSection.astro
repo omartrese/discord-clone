@@ -10,15 +10,17 @@ interface Props {
 const { title, desc, imgSrc, bgColor, reversed } = Astro.props;
 ---
 
-<section
-    style={`background-color: ${bgColor};`}
-    class={`flex justify-center`}
->
+<section style={`background-color: ${bgColor};`} class={`flex justify-center`}>
     <div
-        class={`flex text-[#23272A] ${reversed ? "flex-row-reverse" : "flex-row"} items-center justify-around w-[1260px] px-10 py-32`}
+        class={`flex text-[#23272A] ${reversed ? "flex-row-reverse" : "flex-row"} items-center justify-around w-[1260px] px-10 py-32 *:mx-1`}
     >
-        <img style="max-width: 580px; height: 376.4px" class="w-[49.95vw]" src={imgSrc} alt={title} />
-        <div class="max-w-[380px] ">
+        <img
+            style="max-width: 580px; height: 376.4px"
+            class="w-[49.95vw]"
+            src={imgSrc}
+            alt={title}
+        />
+        <div class="max-w-[380px]">
             <h6 class="text-5xl leading-[56px]">{title}</h6>
             <p class="text-lg">
                 {desc}

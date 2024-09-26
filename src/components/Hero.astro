@@ -6,15 +6,19 @@ import Download from "./Svgs/DownloadSvg.astro";
     id="hero"
     class="bg-[#4B42FF] relative flex items-end justify-center max-[982px]:justify-start max-md:flex-col-reverse max-md:items-start max-md:justify-between max-md:pb-24"
 >
-    <div class="w-1/2 z-[1] max-w-[689px] max-[982px]:hidden max-md:flex max-md:items-center  max-md:absolute max-md:bottom-0  max-md:mx-auto">
+    <div
+        class="w-1/2 max-md:w-[95vw] z-[1] max-w-[689px] max-[982px]:hidden max-md:flex max-md:items-start max-md:absolute max-md:bottom-0 max-md:mx-auto"
+    >
         <img
-            class="min-w-[450px] max-w-[689px] max-h-[352px] max-md:w-auto "
+            class="min-w-[320px] max-w-[689px] max-h-[352px] ml-[-80px]"
             src="../../public/img1.svg"
             alt="Hero section 1"
         />
     </div>
 
-    <div class="pt-20 pb-40 max-[300px]:px-3 min-[982px]:m-0 max-md:pt-12 ml-10 z-10">
+    <div
+        class="pt-20 pb-40 max-[300px]:px-3 min-[982px]:m-0 max-md:pt-12 max-md:pl-6 z-10"
+    >
         <h1
             class="text-start text-nowrap text-6xl max-md:text-[7vw] max-md:text-wrap min-[982px]:text-center max-[982px]:text-wrap"
         >
@@ -33,7 +37,7 @@ import Download from "./Svgs/DownloadSvg.astro";
         </div>
 
         <div
-            class="flex flex-row text-nowrap flex-nowrap justify-center max-[982px]:justify-start max-[982px]:flex-col max-[982px]:items-start *:hover:no-underline *:duration-200"
+            class="flex flex-row text-nowrap flex-nowrap justify-center max-[982px]:justify-start max-[982px]:flex-col max-[982px]:items-start *:hover:no-underline *:duration-200 max-md:*:ml-0"
         >
             <a
                 href=""
@@ -53,8 +57,10 @@ import Download from "./Svgs/DownloadSvg.astro";
         </div>
     </div>
 
-    <div class="w-1/2 max-md:hidden max-w-[689px] max-[982px]:z-[0] max-[982px]:absolute max-[982px]:right-0 max-[982px]:bottom-0">
-        <img 
+    <div
+        class="w-1/2 max-md:hidden max-w-[689px] max-[982px]:z-[0] max-[982px]:absolute max-[982px]:right-0 max-[982px]:bottom-0"
+    >
+        <img
             class="max-w-[615px]
             max-h-[360px]"
             src="../../public/img2.svg"

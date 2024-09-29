@@ -16,10 +16,10 @@ const { title, desc, imgSrc, bgColor, reversed, column, font, textCenter, finalI
 
 <section style={`background-color: ${bgColor};`} class={`flex justify-center`}>
     <div
-        class={`flex text-[#23272A] ${column ? "flex-col" : "flex-row"} ${reversed ? "flex-row-reverse" : "flex-row"} ${column && reversed ? "min-[1px]:flex-col-reverse" : null} items-center justify-around w-[1260px] *:min-w-[272px] min-[982px]:px-10 py-32 max-md:py-20 *:mx-1  max-md:flex-col $ max-md:items-start`}
+        class={`flex text-[#23272A] ${column ? "flex-col" : "flex-row"} ${reversed ? "flex-row-reverse" : "flex-row"} ${column && reversed ? "min-[1px]:flex-col-reverse" : null} items-center justify-around w-[1260px] *:min-w-[272px] min-[982px]:px-10 py-32 ${finalImg ? "pb-20 pt-28" : null} max-md:py-20 *:mx-1  max-md:flex-col $ max-md:items-start`}
     >
         <img
-            style=`${finalImg ? "max-width: 580px;" : null}`
+            style=`${!finalImg ? "max-width: 580px;" : null}`
             class="w-[90vw] self-center"
             src={imgSrc}
             alt={title}

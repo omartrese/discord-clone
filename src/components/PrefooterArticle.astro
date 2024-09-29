@@ -1,8 +1,9 @@
 ---
+import Download from "./Download.astro";
 import FeatureSection from "./FeatureSection.astro";
 ---
 
-<article>
+<article class="bg-[#f6f6f6] flex flex-col justify-center">
     <FeatureSection
         title="Reliable tech for staying close"
         desc={`Low-latency voice and video feels like you’re in the same room. Wave
@@ -16,5 +17,8 @@ import FeatureSection from "./FeatureSection.astro";
         textCenter={true}
     />
 
-    
+    <div class="flex justify-center px-40">
+        <Download />
+    </div>
+
 </article>

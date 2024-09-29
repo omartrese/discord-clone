@@ -3,6 +3,7 @@ import HeaderLogo from "./Svgs/LogoSvg.astro";
 import MenuExit from "./Svgs/CrossSvg.astro";
 import MenuImg from "./Svgs/MenuSvg.astro";
 import HeaderLink from "./HeaderLink.astro";
+import Download from "./Download.astro";
 ---
 
 <header class="bg-[#4B42FF] *:overflow-hidden">
@@ -17,7 +18,7 @@ import HeaderLink from "./HeaderLink.astro";
 
         <nav class="z-20">
             <ul
-                class="flex flex-row text-sm transition-transform duration-500 transform max-[982px]:fixed max-[982px]:flex-col max-[982px]:translate-x-full max-[982px]:w-auto max-[982px]:top-0 max-[982px]:right-0 max-[982px]:bottom-0 max-[300px]:left-0 max-[982px]:items-start max-[982px]:rounded-tl-lg max-[982px]:bg-white text-gray-800 min-[982px]:text-white min-[982px]:justify-between "
+                class="flex flex-row text-sm transition-transform duration-500 transform max-[982px]:fixed max-[982px]:flex-col max-[982px]:translate-x-full max-[982px]:w-auto max-[982px]:top-0 max-[982px]:right-0 max-[982px]:bottom-0 max-[300px]:left-0 max-[982px]:items-start max-[982px]:rounded-tl-lg max-[982px]:bg-white text-gray-800 min-[982px]:text-white min-[982px]:justify-between"
             >
                 <div
                     class="flex justify-around w-80 px-0 py-8 min-[982px]:hidden"
@@ -35,9 +36,9 @@ import HeaderLink from "./HeaderLink.astro";
                 <HeaderLink title="Careers" />
 
                 <div
-                    class="min-[982px]:hidden absolute bottom-5 self-center my-1 bg-[#5865f2] py-2 px-28 max-[320px]:px-20 text-xs text-white font-medium rounded-2xl"
+                    class="min-[982px]:hidden absolute bottom-0 self-center my-1 max-[320px]:*:px-20 text-xs"
                 >
-                    <button> Download </button>
+                    <Download />
                 </div>
             </ul>
         </nav>

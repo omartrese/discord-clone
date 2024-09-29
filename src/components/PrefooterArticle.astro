@@ -1,0 +1,38 @@
+---
+import Download from "./Download.astro";
+import FeatureSection from "./FeatureSection.astro";
+---
+
+<article class="bg-[#f6f6f6] flex flex-col justify-center">
+  <div class="px-10">
+    <FeatureSection
+      title="RELIABLE TECH FOR STAYING CLOSE"
+      desc={`Low-latency voice and video feels like you’re in the same room. Wave
+              hello over video, watch friends stream their games, or gather up and
+              have a drawing session with screen share.`}
+      imgSrc="/public/img6.svg"
+      bgColor="#f6f6f6"
+      reversed={true}
+      column={true}
+      font={true}
+      textCenter={true}
+      finalImg={true}
+    />
+  </div>
+
+  <div class="flex flex-col items-center mb-14">
+    <div>
+      <img src="/public/ministars.svg" alt="ministars" class="translate-y-2" />
+      <h6
+        class="text-[#23272A] text-[32px] text-center font-ggSansExtraBold text-wrap"
+        
+      >
+        Ready to start your journey?
+      </h6>
+    </div>
+
+    <div class="text-xl font-ggSansNormal mt-10">
+      <Download />
+    </div>
+  </div>
+</article>

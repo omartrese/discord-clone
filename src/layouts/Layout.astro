@@ -1,0 +1,90 @@
+---
+import Header from "../components/Header.astro";
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="description"
+			content="Discord es la plataforma perfecta para jugar y pasarlo bien con amigos, o incluso para crear una comunidad con miembros en todo el mundo. Personaliza tu propio espacio para hablar, jugar y socializar."
+		/>
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="">
+		<main class="bg-[#4B42FF] w-screen h-screen">
+			<Header />
+			<slot />
+		</main>
+	</body>
+</html>
+<style is:global>
+	@font-face {
+		font-family: "discordFont";
+		src: url("../../public/fonts/ABCGintoNord-Black.otf");
+	}
+	@font-face {
+		font-family: "ggSansNormal";
+		src: url("../../public/fonts/ggsans-Normal.ttf");
+	}
+	@font-face {
+		font-family: "ggSansSemiBold";
+		src: url("../../public/fonts/ggsans-Semibold.ttf");
+	}
+	@font-face {
+		font-family: "ggSansExtraBold";
+		src: url("../../public/fonts/ggsans-ExtraBold.ttf");
+	}
+
+	* {
+		box-sizing: border-box;
+		margin: 0;
+	}
+
+	html {
+		font-family: "ggSans", system-ui, sans-serif;
+		color-scheme: dark light;
+		overflow-x: hidden;
+	}
+
+	body {
+		background: linear-gradient(
+			180deg,
+			#060d4c 0%,
+			#1d2b7f 50%,
+			#2d47a6 100%
+		);
+
+		/* background-image: url('../../public/bg.webp'); */
+
+		background-size: cover;
+		background-repeat: no-repeat;
+		position: relative;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		font-family: "discordFont", sans-serif;
+	}
+
+	h6.nonTitle {
+		font-family: "ggSansExtraBold", sans-serif;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+</style>

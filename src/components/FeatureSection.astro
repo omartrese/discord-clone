@@ -1,0 +1,40 @@
+---
+interface Props {
+    title: string;
+    desc: string;
+    imgSrc: string;
+    bgColor: string;
+    reversed?: boolean;
+    column?: boolean;
+    textCenter?: boolean;
+    font?: boolean;
+    finalImg?: boolean;
+}
+
+const { title, desc, imgSrc, bgColor, reversed, column, font, textCenter, finalImg } = Astro.props;
+---
+
+<section style={`background-color: ${bgColor};`} class={`flex justify-center`}>
+    <div
+        class={`flex text-[#23272A] ${column ? "flex-col" : "flex-row"} ${reversed ? "flex-row-reverse" : "flex-row"} ${column && reversed ? "min-[1px]:flex-col-reverse" : null} items-center justify-around w-[1260px] *:min-w-[272px] min-[982px]:px-10 py-32 ${finalImg ? "pb-20 pt-28" : null} max-md:py-20 *:mx-1  max-md:flex-col $ max-md:items-start`}
+    >
+        <img
+            style=`${!finalImg ? "max-width: 580px;" : null}`
+            class="w-[90vw] self-center"
+            src={imgSrc}
+            alt={title}
+        />
+        <div class=`min-md:max-w-[380px] max-md:w-[100vw] px-2 ${textCenter ? "*:text-center" : null}`>
+            <h6
+                class={`${font ? "font-discordTitle" : "nonTitle"} min-md:leading-[56px] leading-0 max-[480px]:text-xl text-[48px] max-md:text-[4.5vw]`}
+            >
+                {title}
+            </h6>
+            <p
+                class="mt-6 text-lg leading-8 max-[480px]:text-sm max-md:text-[3vw] max-md:leading-7"
+            >
+                {desc}
+            </p>
+        </div>
+    </div>
+</section>

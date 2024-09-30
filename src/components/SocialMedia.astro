@@ -1,0 +1,14 @@
+---
+interface Props {
+  url: string;
+  img: string;
+}
+
+const { url, img } = Astro.props;
+---
+
+<div>
+  <a href={url}>
+    <img src={img} alt="social media" />
+  </a>
+</div>

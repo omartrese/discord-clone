@@ -1,68 +1,82 @@
 ---
 import Download from "./Download.astro";
 import LogoSvg from "./Svgs/LogoSvg.astro";
+import FooterMenuSection from "./FooterMenuSection.astro";
+import SocialMedia from "./SocialMedia.astro";
+
+const productLinks = [
+  "Download",
+  "Nitro",
+  "Status",
+  "App Directory",
+  "New Mobile Experience",
+];
+const companyLinks = ["About", "Jobs", "Brand", "Newsroom", "Fall Release"];
+const resourcesLinks = [
+  "College",
+  "Support",
+  "Safety",
+  "Blog",
+  "Feedback",
+  "StreamKit",
+  "Creators",
+  "Community",
+  "Developers",
+  "Gaming",
+  "Official 3rd Party Merch",
+];
+const policiesLinks = [
+  "Terms",
+  "Privacy",
+  "Cookie Settings",
+  "Guidelines",
+  "Acknowledgements",
+  "Licenses",
+  "Company Information",
+];
 ---
 
-<footer class="bg-[#23272A] w-screen">
-
-    <section>
-        
-        <nav>
-            Social Media Images Here
-        </nav>
+<footer class="bg-[#23272a] w-screen pt-20 max-md:pt-10">
+  <article class="flex flex-row max-md:flex-col justify-around px-7 text-sm">
+    <section class="max-md:mb-14">
+      <nav class="flex flex-row items-center *:mx-3">
+        <SocialMedia url="https://x.com" img="../../public/twitter.svg" />
+        <SocialMedia
+          url="https://instagram.com"
+          img="../../public/instagram.svg"
+        />
+        <SocialMedia
+          url="https://facebook.com"
+          img="../../public/facebook.svg"
+        />
+        <SocialMedia url="https://youtube.com" img="../../public/youtube.svg" />
+        <SocialMedia url="https://tiktok.com" img="../../public/tiktok.svg" />
+      </nav>
     </section>
 
-    <nav>
-        <div>
-            <h6>Product</h6>
+    <section>
+      <nav class="*:text-start grid grid-cols-4 max-lg:grid-cols-2 gap-10">
+        <FooterMenuSection title="Product" links={productLinks} />
+        <FooterMenuSection title="Company" links={companyLinks} />
+        <FooterMenuSection title="Resources" links={resourcesLinks} />
+        <FooterMenuSection title="Policies" links={policiesLinks} />
+      </nav>
+    </section>
+  </article>
 
-            <p>Download</p>
-            <p>Nitro</p>
-            <p>Status</p>
-            <p>App Directory</p>
-            <p>New Mobile Experience</p>
-        </div>
-        <div>
-            <h6>Company</h6>
-
-            <p>About</p>
-            <p>Jobs</p>
-            <p>Brand</p>
-            <p>Newsroom</p>
-            <p>Fall Release</p>    
-        </div>
-        <div>
-            <h6>Resources</h6>
-
-            <p>College</p>
-            <p>Support</p>
-            <p>Safety</p>
-            <p>Blog</p>
-            <p>Feedback</p>    
-            <p>StreamKit</p>
-            <p>Creators</p>
-            <p>Community</p>
-            <p>Developers</p>
-            <p>Gaming</p>
-            <p>Official 3rd Party Merch</p>
-        </div>
-        <div>
-            <h6>Policies</h6>
-
-            <p>Terms</p>
-            <p>Privacy</p>
-            <p>Cookie Settings</p>
-            <p>Guidelines</p>
-            <p>Acknowledgements</p>
-            <p>Licenses</p>
-            <p>Company Information</p>
-        </div>
-    </nav>
-
-    <hr style="color:white">
-
-    <footer>
-        <LogoSvg color="#FFFFFF" />
-        <Download />
-    </footer>
+  <footer class="flex flex-col justify-center">
+    <div class="">
+      <hr id="separator" class="max-w-[1180px] mx-10" />
+    </div>
+    <div class="my-10 flex flex-row justify-around">
+      <LogoSvg color="#FFFFFF" />
+      <Download />
+    </div>
+  </footer>
 </footer>
+
+<style>
+  hr#separator {
+    border-color: #5865f2;
+  }
+</style>

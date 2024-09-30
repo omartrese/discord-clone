@@ -1,0 +1,21 @@
+---
+interface Props {
+  title: string;
+  links: string[];
+}
+
+const { title, links } = Astro.props;
+---
+
+<div class="mb-10 mr-10 h-auto text-base">
+  <h6 class="text-[#5865F2]">{title}</h6>
+  <ul>
+    {
+      links.map((link) => (
+        <li class="mt-2">
+          <a>{link}</a>
+        </li>
+      ))
+    }
+  </ul>
+</div>

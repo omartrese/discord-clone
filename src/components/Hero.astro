@@ -1,5 +1,5 @@
 ---
-import Download from "./Svgs/DownloadSvg.astro";
+import DownloadSvg from "./Svgs/DownloadSvg.astro";
 ---
 
 <section
@@ -7,11 +7,11 @@ import Download from "./Svgs/DownloadSvg.astro";
     class="bg-[#4B42FF] relative flex items-end justify-center max-[982px]:justify-start max-md:flex-col-reverse max-md:items-start max-md:justify-between max-md:pb-24"
 >
     <div
-        class="w-1/2 max-md:w-[95vw] z-[1] max-w-[689px] max-[982px]:hidden max-md:flex max-md:items-start max-md:absolute max-md:bottom-0 mx-auto"
+        class="w-1/2 max-md:w-[95vw] z-[1] max-w-[689px] max-[982px]:hidden max-md:flex max-md:items-start max-md:absolute max-md:bottom-0 max-md:mx-auto"
     >
         <img
             class="min-w-[320px] max-w-[689px] max-h-[352px] ml-[-80px]"
-            src="../../public/img1.svg"
+            src="/public/img1.svg"
             alt="Hero section 1"
         />
     </div>
@@ -44,7 +44,7 @@ import Download from "./Svgs/DownloadSvg.astro";
                 class="flex flex-row items-center justify-center rounded-full text-lg font-medium bg-white text-[#23272A] px-6 py-3 mx-4 my-2 hover:shadow-2xl hover:text-indigo-500 max-[300px]:text-xs max-[300px]:px-6 max-[300px]:py-2"
             >
                 <div class="mr-3">
-                    <Download />
+                    <DownloadSvg />
                 </div>
                 Download for Linux
             </a>
@@ -63,7 +63,7 @@ import Download from "./Svgs/DownloadSvg.astro";
         <img
             class="max-w-[615px]
             max-h-[360px]"
-            src="../../public/img2.svg"
+            src="/public/img2.svg"
             alt="Hero section 2"
         />
     </div>
@@ -72,7 +72,7 @@ import Download from "./Svgs/DownloadSvg.astro";
 <style>
     @media (min-width: 982px) {
         #hero {
-            background-image: url("../../public/bg.png");
+            background-image: url("/public/bg.png");
             background-size: cover;
             background-repeat: no-repeat;
         }

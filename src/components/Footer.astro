@@ -1,5 +1,5 @@
 ---
-import Download from "./Download.astro";
+import BlueBtn from "./BlueBtn.astro";
 import LogoSvg from "./Svgs/LogoSvg.astro";
 import FooterMenuSection from "./FooterMenuSection.astro";
 import SocialMedia from "./SocialMedia.astro";
@@ -64,13 +64,13 @@ const policiesLinks = [
     </section>
   </article>
 
-  <footer class="flex flex-col justify-center">
-    <div class="">
-      <hr id="separator" class="max-w-[1180px] mx-10" />
+  <footer class="">
+    <div class="w-screen h-1">
+      <hr id="separator" class="max-w-[1180px] mx-auto" />
     </div>
-    <div class="my-10 flex flex-row justify-around">
+    <div class="py-6 flex flex-row justify-around">
       <LogoSvg color="#FFFFFF" />
-      <Download />
+      <BlueBtn name="Register" small={true} />
     </div>
   </footer>
 </footer>

@@ -1,0 +1,15 @@
+---
+interface Props {
+  name?: string;
+  small?: boolean;
+}
+
+const { name, small } = Astro.props;
+---
+
+<button
+  class=`bg-[#5865f2] min-[982px]:py-3 py-2 ${small ? "px-5" : "px-28"} text-white font-medium rounded-full`
+>
+
+  {name ? name : "Download"}
+</button>
